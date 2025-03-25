@@ -14,6 +14,6 @@ public class UserController {
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     @GetMapping
     public String userPage() {
-        return "User Page";
+        return "Hello, User from Spring Security!";
     }
 }

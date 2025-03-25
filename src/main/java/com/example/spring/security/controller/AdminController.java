@@ -12,6 +12,6 @@ public class AdminController {
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping
     public String adminPage() {
-        return "Admin Page";
+        return "Hello, User from Spring Security!";
     }
 }

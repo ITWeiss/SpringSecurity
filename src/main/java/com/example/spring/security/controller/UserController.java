@@ -2,11 +2,11 @@ package com.example.spring.security.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 @RequestMapping("/user")
 @EnableMethodSecurity
 public class UserController {
@@ -14,6 +14,6 @@ public class UserController {
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     @GetMapping
     public String userPage() {
-        return "Hello, User from Spring Security!";
+        return "userPage";
     }
 }
